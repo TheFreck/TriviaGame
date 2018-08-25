@@ -1,0 +1,27 @@
+body{
+    background: tan;
+    padding: 0;
+}
+nav{
+    position: fixed;
+    background: darkred;
+    height: 75px;
+    width: 100%;
+    margin: 0;
+}
+footer{
+    position: fixed;
+    background: darkred;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+}
+
+.card{
+    position: relative;
+    top: 100px;
+    width: 900px;
+    height: 700px;
+    background: green;
+    margin: auto;
+}
