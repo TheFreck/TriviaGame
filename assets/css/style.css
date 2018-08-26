@@ -16,12 +16,42 @@ footer{
     width: 100%;
     bottom: 0;
 }
+p{
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    top: 45%;
+}
 
 .card{
     position: relative;
     top: 100px;
     width: 900px;
     height: 700px;
-    background: green;
+    background: rgb(218, 33, 33);
     margin: auto;
+    padding: 0 2% 3% 2%;
+    border-radius: 1%;
+}
+.question{
+    position: relative;
+    background: rgb(218, 33, 33);
+    height: 20%;
+    text-align: center;
+    top: 0;
+    font-size: 32px;
+    border-radius: 1%;
+}
+.answer{
+    background: brown;
+    height: 140px;
+    width: 100%;
+    border: outset; 
+    border-width: 20%;
+    margin: .4% auto;
+    border-radius: 5%;
+}
+#screenReturn{
+    color: lightsalmon;
+    font-size: 32px;
 }
