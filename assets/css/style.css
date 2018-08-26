@@ -3,11 +3,12 @@ body{
     padding: 0;
 }
 nav{
-    position: fixed;
+    position: relative;
     background: darkred;
     height: 75px;
     width: 100%;
     margin: 0;
+    top: 5px;
 }
 footer{
     position: fixed;
@@ -21,6 +22,13 @@ p{
     text-align: center;
     vertical-align: middle;
     top: 45%;
+}
+button{
+    position: relative;
+    height: 85px;
+    width: 8%;
+    vertical-align: middle;
+    top: -5px;
 }
 
 .card{
@@ -51,7 +59,21 @@ p{
     margin: .4% auto;
     border-radius: 5%;
 }
-#screenReturn{
+.navItem{
+    margin: 0;
+}
+
+#inGame{
+    position: relative;
     color: lightsalmon;
     font-size: 32px;
+    display: inline;
+    padding: 1%;
+}
+#score{
+    position: relative;
+    color: lightsalmon;
+    font-size: 32px;
+    display: inline;
+    padding: 1%;
 }

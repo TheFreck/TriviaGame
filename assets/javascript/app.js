@@ -133,13 +133,20 @@ var trivia=[
         answer: "T/F"
     },
 ];
- 
-var ingame = false;
+
+var inGame = false;
+$("#inGame").text("Game On: " + inGame);
 
 // create a begin function
+var qIndex;
+var aIndex;
+var score = 0;
+$("#score").text("Score: " + score);
+
 function begin(){
 
     inGame = true;
+    $("#inGame").text("Game On: " + inGame);
     // initialize
     $("#space").empty();
     var questionArray = [];
@@ -161,14 +168,13 @@ function begin(){
     }
 
 
-    var qIndex = Math.floor(Math.random()*questionArray.length);
     
-    
+    qIndex = Math.floor(Math.random()*questionArray.length);
     
     console.log("qIndex",qIndex);
     // randomize the answers
     
-    var aIndex = Math.floor(Math.random()*4);
+    aIndex = Math.floor(Math.random()*4);
     console.log("aIndex",aIndex);
 
     var answerArray = [
@@ -178,13 +184,15 @@ function begin(){
         trivia[qIndex].option4,
         trivia[qIndex].option1,
         trivia[qIndex].option2,
-        trivia[qIndex].option3
+        trivia[qIndex].option3,
+        trivia[qIndex].answer,
     ];
     
     var answer1 = answerArray[aIndex];
     var answer2 = answerArray[aIndex+1];
     var answer3 = answerArray[aIndex+2];
     var answer4 = answerArray[aIndex+3];
+    var rightAnswer = answerArray[7];
     
     var answerArray = [answer1, answer2, answer3, answer4]
     
@@ -199,6 +207,7 @@ function begin(){
         for(i=0; i<4; i++){
             var answers = $("<button>");
             answers.addClass("answer");
+            answers.attr("data", answerArray[i]);
             answers.html("<p>" + answerArray[i] + "</p>");
             answers.appendTo(answerList);
         }
@@ -209,16 +218,26 @@ function begin(){
     addQuestion(qIndex);
     addAnswers();
 
+    // create a click event to select an answer
+    
+    $(document).on("click", '.answer', function(){
+        if($(this).attr("data")===rightAnswer){
+            score ++;
+            $("#score").text("Score: " + score);
+            console.log("win or lose: win.",$(this).attr("data") + "=" + rightAnswer);
+        }else{
+            console.log("win or lose: lose.",rightAnswer);
+        }
+    });
+
+    //finish the card
     if(trivia.length > 1){
         trivia.splice(qIndex,1);
     }else{
         $("#card").empty();
         $("#card").html("<h1>You Win!!!</h1>");
+        inGame = false;
+        $("#inGame").text("Game On: " + inGame);
     }
 }
 
-// create a click event to select an answer
-
-$(document).on("click", '.answer', function(){
-    console.log("this",this);
-});
