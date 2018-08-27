@@ -9,6 +9,9 @@ nav{
     width: 100%;
     margin: 0;
     top: 5px;
+    box-shadow: 5px 5px 20px 5px #8f8465;
+    display: grid;
+    grid-template-columns: 18% 20% 20% 20% 22%;
 }
 footer{
     position: fixed;
@@ -16,6 +19,7 @@ footer{
     height: 50px;
     width: 100%;
     bottom: 0;
+    box-shadow: -5px -5px 20px 5px #635b46;
 }
 p{
     position: relative;
@@ -26,20 +30,33 @@ p{
 button{
     position: relative;
     height: 85px;
-    width: 8%;
+    width: 80%;
+    left: .5%;
     vertical-align: middle;
     top: -5px;
+}
+h1{
+    color: lightgoldenrodyellow;
+    font-size: 34px;
+    line-height: 1.5;
+}
+h3{
+    font-size: 44px;
+    text-align: center;
+    color: lightgoldenrodyellow;
+    padding-top: 20%;
 }
 
 .card{
     position: relative;
-    top: 100px;
+    top: 50px;
     width: 900px;
     height: 700px;
     background: rgb(218, 33, 33);
     margin: auto;
     padding: 0 2% 3% 2%;
     border-radius: 1%;
+    box-shadow: 5px 5px 20px 5px #8f8465;
 }
 .question{
     position: relative;
@@ -49,6 +66,7 @@ button{
     top: 0;
     font-size: 32px;
     border-radius: 1%;
+    color: lightsalmon
 }
 .answer{
     background: brown;
@@ -58,22 +76,52 @@ button{
     border-width: 20%;
     margin: .4% auto;
     border-radius: 5%;
+    border-color: rgb(167, 58, 58);
+    color: lightsalmon;
+    font-size: 22px;
 }
 .navItem{
     margin: 0;
+    position: relative;
+}
+.glow{
+    padding: 10px;
+    box-shadow: 0px 0px 60px rgb(255, 131, 82) inset;
+
+}
+.begin{
+    box-shadow: 0px 5px 20px 5px #8f8465 inset;
+    border: 0;
+    font-size: 30px;
+    color: rgb(21, 44, 21);
+    width: 90%;
+}
+.return{
+    margin: auto;
+    background: lightsalmon;
+    color: darkolivegreen;
+    border: ridge;
+    width: 100%;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#inGame, #score, #timer{
+    position: relative;
+    color: darkolivegreen;
+    font-size: 32px;
+    display: inline;
+    padding: 1%;
+    text-align: right;
+    left: 5%;
 }
 
 #inGame{
-    position: relative;
-    color: lightsalmon;
-    font-size: 32px;
-    display: inline;
-    padding: 1%;
+
 }
 #score{
-    position: relative;
-    color: lightsalmon;
-    font-size: 32px;
-    display: inline;
-    padding: 1%;
+    
+}
+#timer{
+    
 }

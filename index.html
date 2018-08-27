@@ -10,16 +10,18 @@
 </head>
 <body>
     <nav>
-        <button id="begin" onclick="begin()" class="navItem">Begin</button>
-        <section id="inGame" class="navItem"></section>
-        <section id="score" class="navItem"></section>
+        <button id="begin" onclick="begin()" class="navItem begin">Begin</button>
+        <section class="navItem return"><h1>Game On: <span id="inGame"></span></h1></section>
+        <section class="navItem return"><h1>Score: <span id="score"></span></h1></section>
+        <section class="navItem return"><h1>Timer: <span id="timer">30</span></h1></section>
+        
     </nav>
 
     <div id="space">
         
     </div>
 
-    <footer>footer</footer>
+    <footer></footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="./assets/javascript/app.js"></script>
